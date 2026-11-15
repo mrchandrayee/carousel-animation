@@ -1,0 +1,19 @@
+*{box-sizing:border-box}
+body{font-family:Arial,sans-serif;margin:0;background:#fff;color:#fff}
+.app{width:100%;max-width:1200px;margin:0 auto;min-height:100vh;background:#fff}
+.header{height:80px;display:flex;align-items:center;justify-content:center;background:#1d1b1f}
+.header h1{margin:0;color:#ffe36e;font-size:clamp(23px,3.2vw,34px);font-weight:700;text-shadow:0 0 2px #ffdf68}
+.case-studies{padding:60px 0 80px;background:#fff;overflow:hidden}
+.carousel-window{width:90%;max-width:1200px;margin:0 auto;overflow:hidden;padding:4px 0 12px;touch-action:pan-y}
+.carousel-track{display:flex;gap:10px;will-change:transform;transition:transform .45s cubic-bezier(.22,.75,.25,1)}
+.case-card{flex:0 0 calc((100% - 20px)/3);min-width:0;background:#063c73;border-radius:12px;box-shadow:0 2px 10px rgba(0,0,0,.08);padding:20px;text-align:center;max-width:340px;transition:transform .3s ease;color:#fff;display:flex;align-items:center;justify-content:center;aspect-ratio:1.18/1}
+.case-card:hover{transform:translateY(-5px)}
+.case-card h2{margin:0;color:#fff;font-size:clamp(16px,2.4vw,24px);font-weight:700}
+.carousel-controls{display:flex;align-items:center;justify-content:center;gap:12px;margin-top:0}
+.carousel-pagination{display:flex;align-items:center;justify-content:center;gap:8px}
+.swiper-pagination-bullet{width:7px;height:7px;border:0;border-radius:50%;padding:0;background:#ff4d00;opacity:.5;cursor:pointer;transition:opacity .2s,transform .2s}
+.swiper-pagination-bullet-active{opacity:1;transform:scale(1.12)}
+.nav-button{width:24px;height:24px;border:0;background:transparent;color:#ff4d00;font-size:22px;line-height:1;cursor:pointer;opacity:.75}
+.nav-button:hover{opacity:1}
+@media(max-width:560px){.header{height:68px}.case-studies{padding:42px 0 60px}.carousel-window{width:90%}.case-card{padding:12px;aspect-ratio:1.05/1}.case-card h2{font-size:clamp(13px,4vw,18px)}.carousel-pagination{gap:6px}.swiper-pagination-bullet{width:6px;height:6px}}
+@media(prefers-reduced-motion:reduce){.carousel-track,.case-card{transition:none}}
